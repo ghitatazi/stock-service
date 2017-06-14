@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html ng-app="myprojectApplication">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Angular stock service App</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body ng-controller="mainController">
+	    <div class="container">
+	        <div class="jumbotron text-center">
+	            <h4>Number of existing stocks: <span class="label label-info">{{ stocks.length }}</span></h4>
+	        </div>
+
+	        <div class="row" id="graph_container"></div>
+
+	        <div id="stocks-list" class="row" style="font-size:10px;">
+	            <div class="col-sm-4">
+		            <table class="table table-bordered">
+					    <tbody>
+					    	<tr>
+					      	    <th scope="row">Index</th>
+					      	    <td ng-repeat="element in stocks">{{ element.index }}</td>
+					        </tr>
+					        <tr>
+					      	    <th scope="row">CAC40</th>
+				      	    	<td ng-repeat="element in stocks">
+				      	    		<input type="number" ng-model="element.stocks.CAC40" step="any">
+				      	    	</td>
+					        </tr>
+					        <tr>
+					      	    <th scope="row">NASDAQ</th>
+					      	    <td ng-repeat="element in stocks">
+					      	    	<input type="number" ng-model="element.stocks.NASDAQ" step="any">
+					      	    </td>
+					        </tr>
+					    </tbody>
+					</table>
+	            </div>
+	        </div>
+	    </div>
+
+	    <script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+	    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+		<script type="text/javascript" src="js/core.js"></script>
+	</body>
+</html>

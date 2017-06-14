@@ -1,0 +1,23 @@
+### Author : Ghita TAZI
+
+CHALLENGE
+------------
+
+The goal is to consume a Web Service that publishes the CAC40 and NASDAQ rates<br />
+The app must:<br />
+- show the retrieved values on a table and a graph<br />
+- make the table cells editable: when the user modifies a cells, the update is also shown on the graph<br />
+- refresh the values every second and update table and graph, keeping the user eventual modifications<br />
+The graph should be drawn using D3js<br />
+
+INSTALLATION
+------------
+
+Install node.js<br />
+At the project's root, execute: npm install<br />
+
+BUILD
+-----
+
+Execute: npm start<br />
+In the address bar of your favorite browser, type: 127.0.0.1:8000<br />
